@@ -1,0 +1,11 @@
+{
+    "database": {
+        "url": "mongodb://localhost:27017/todo_module"
+    },
+    
+    "host": {
+        "ip": "localhost",
+        "port": "4000"
+    }
+
+}

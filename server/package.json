@@ -1,0 +1,29 @@
+{
+  "name": "todo_module",
+  "version": "0.0.1",
+  "description": "task sorting module for any web resource implemented on nodejs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon run server",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DotBlood/todo_module.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DotBlood/todo_module/issues"
+  },
+  "homepage": "https://github.com/DotBlood/todo_module#readme",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
