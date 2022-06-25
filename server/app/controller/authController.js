@@ -1,3 +1,9 @@
+//import modulesql
+const con = require('../../core/database')
+const chekUserInDB = require("../models/validatorAuthDB")
+
+
+
 async function register(req, res) {
     const username = req.body.username
     const email = req.body.email
@@ -40,28 +46,30 @@ async function register(req, res) {
     }
 }
 
+
 async function login(req, res) {
 
     const UsernameOrEmail = req.body.username
     const password = req.body.password
 
     if (!UsernameOrEmail || !password) {
-        return res.status(400).json({ Error: "Вы ввели не все данные!" }).redirect("/login")
+        return res.status(400).json({ Error: "Вы ввели не все данные!" }).redirect("/auth/login")
     }
     // проверка на существование email 
     else {
-        //const canditate = await UserShem.findOne({ email: UsernameOrEmail })
+        const canditate = chekUserInDB(UsernameOrEmail)
 
         if (canditate) {
+            console.log('ok')
 
         } else if (!canditate) {
-        //    const canditate = await UserShem.findOne({ username: UsernameOrEmail })
-            if (canditate) {
-                console.log(canditate)
-            }
-            else {
-                console.log("restart")
-            }
+            //    const canditate = await UserShem.findOne({ username: UsernameOrEmail })
+            //if (canditate) {
+            //  console.log(canditate)
+            //}
+            //else {
+            console.log("restart")
+            //}
 
         }
 

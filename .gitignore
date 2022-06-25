@@ -19,8 +19,7 @@ pids
 lib-cov
 
 # config folder
-*.config
-.config
+config/*
 
 # Coverage directory used by tools like istanbul
 coverage

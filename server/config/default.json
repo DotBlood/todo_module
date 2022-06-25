@@ -1,8 +1,8 @@
 {
     "database": {
-        "host": "localhost",
-        "user": "root",
-        "password": "",
+        "host": "95.165.28.101",
+        "user": "todo_module",
+        "password": "3CO9-uLjg()C[TjG",
         "database": "todo_module"
     },
 
