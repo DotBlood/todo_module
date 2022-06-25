@@ -2,7 +2,7 @@
 const router = require("express").Router()
 
 //import controllers
-
+const {register, login} = require("../controller/authController")
 
 
 
@@ -15,27 +15,22 @@ const router = require("express").Router()
 
 
 // login
-router.get("/login", (req, res, next) =>{
-    
-})
-
-router.post("/login", (req, res, next) =>{
+router.get("/login", (req, res, next) => {
 
 })
+
+router.post("/login", login)
 
 
 
 
 // register
-router.get("/register", (req, res, next) =>{
-    res.send('asd')
-})
 
-router.post("/register", (req, res, next) =>{
-    res.send('asd')
-})
+
+router.post("/register", register)
+
 // logout
-router.post("/logout", (req, res, next) =>{
+router.post("/logout", (req, res, next) => {
     res.send('asd')
 })
 
