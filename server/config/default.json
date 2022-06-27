@@ -1,17 +1,10 @@
 {
     "database": {
-        "host": "**",
+        "host": "127.0.0.1",
         "user": "todo_module",
         "password": "3CO9-uLjg()C[TjG",
         "database": "todo_module"
     },
-
-    "sql_table": {
-        "users": "create table if not exists users (`user_id` int primary key auto_increment,`username` varchar(128) not null, `email` varchar(128) not null,`password` varchar(128) not null,`jwt_access` varchar(500), `jwt_refresh` varchar(500),`perms` int references perms(perms_id), `ip` varchar(64))",
-        "todo": "create table if not exists todo(`todo_id` int primary key auto_increment, `user` int references users(user_id), `title` varchar(128) not null, `description` varchar(128) not null)",
-        "perms": "create table if not exists perms (`perms_id` int primary key auto_increment, `permission` varchar(128) not null, `group` varchar(128) not null)"
-    },
-
     "host": {
         "ip": "localhost",
         "port": "4000"

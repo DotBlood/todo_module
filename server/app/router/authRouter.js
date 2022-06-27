@@ -6,7 +6,6 @@ const {register, login} = require("../controller/authController")
 
 
 
-
 //////////////////////////
 //
 //        Router
