@@ -1,0 +1,14 @@
+{
+    "auth": {
+        "login": "SELECT * FROM `users` WHERE (username=? OR email=?)",
+        "register": "INSERT INTO `users` (username, password, email, perms, ip) VALUES (?,?,?,?,?)",
+
+        "ChekUserInDB": "SELECT `username`,`email` FROM `users` WHERE (username=? OR email=?)"
+    },
+
+    "start": {
+        "users": "CREATE TABLE if not exists `users` (`user_id` int(11) primary key auto_increment,`username` varchar(64) not null, `email` varchar(64) not null,`password` varchar(128) not null,`jwt_access` varchar(300), `jwt_refresh` varchar(300),`perms` int references perms(perms_id), `ip` varchar(20))",
+        "todo": "CREATE TABLE if not exists `todo` (`todo_id` int(11) primary key auto_increment, `user` int(11) references users(user_id), `title` varchar(128) not null, `description` varchar(500) not null)",
+        "perms": "CREATE TABLE if not exists `perms` (`perms_id` int(11) primary key auto_increment, `permission` varchar(64) not null, `group` varchar(64) not null)"
+    }
+}

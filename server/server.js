@@ -1,5 +1,5 @@
 const express = require("express");
-const StartChekTable = require("./app/models/StartChekTable");
+const start_db = require("./core/DB_Start");
 const config = require("config");
 
 
@@ -44,9 +44,9 @@ app.use("/auth", authRouter)
 app.listen(HOST_PORT, HOST_IP, (err) => {
     if (err) return console.error(err);
     else {
-        console.log("Сервер успешно запущен!")
-        console.log("Ждем загрузку базы данных...")
-        StartChekTable.con
+        console.log("Сервер успешно запущен!");
+        console.log("Ждем загрузку базы данных...");
+        start_db
         
     }
 })

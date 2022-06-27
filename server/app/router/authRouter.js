@@ -6,7 +6,6 @@ const {register, login} = require("../controller/authController")
 
 
 
-
 //////////////////////////
 //
 //        Router
@@ -16,7 +15,7 @@ const {register, login} = require("../controller/authController")
 
 // login
 router.get("/login", (req, res, next) => {
-
+    res.send("login")
 })
 
 router.post("/login", login)
